@@ -1,0 +1,20 @@
+{
+  "name": "cs-services",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint:illustration-maker-server": "eslint ./apps/illustration-maker-server/src --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-kit": "^11.0.0",
+    "prettier": "^3.0.0"
+  },
+  "dependencies": {
+    "typescript": "^5.7.3"
+  }
+}
