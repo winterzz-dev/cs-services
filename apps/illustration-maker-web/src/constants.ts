@@ -4,4 +4,4 @@ export const STEAM_UPLOAD_URL =
 export const PROJECT_REPO = 'https://github.com/winterzz-dev/cs-services'
 export const TG_URL = 'https://t.me/unknown_develop'
 export const DONATIONS_URL = 'https://www.donationalerts.com/r/em_ocean_x'
-export const STEAM_PASTE_CODE = `$J('[name="file_type"]').val("5");`
+export const STEAM_PASTE_CODE = `$J('#image_width').val(1000).attr('id',''),$J('#image_height').val(1).attr('id',''),$J('[name=file_type]').val(5);`
