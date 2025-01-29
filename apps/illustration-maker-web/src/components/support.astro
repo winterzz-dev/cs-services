@@ -1,0 +1,36 @@
+---
+import { DONATIONS_URL, PROJECT_REPO, TG_URL } from '../constants'
+---
+
+<section class="flex flex-col gap-4">
+  <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Support</h2>
+  <p class="text-sm text-gray-500 dark:text-gray-300">
+    If the service was useful, you can support the author in many ways.
+  </p>
+  <ul
+    class="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400"
+  >
+    <li>
+      Give a star to the <a
+        href={PROJECT_REPO}
+        class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+        target="_blank">repository of the project</a
+      >.
+    </li>
+    <li>Share the project with your friends.</li>
+    <li>
+      Subscribe to the author's <a
+        href={TG_URL}
+        class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+        target="_blank">Telegram channel</a
+      >.
+    </li>
+    <li>
+      Support with <a
+        href={DONATIONS_URL}
+        class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+        target="_blank">DonationAlerts</a
+      >.
+    </li>
+  </ul>
+</section>

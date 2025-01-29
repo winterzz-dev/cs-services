@@ -33,7 +33,7 @@ async function transform(filename: string, quality: number) {
           fit: 'cover',
         })
         .gif({
-          colors: QUALITY_MAP.get(quality),
+          colors: QUALITY_MAP[quality],
         })
         .toFile(getOutputFileName(filename + filenameSuffix))
     })
@@ -60,6 +60,12 @@ async function transform(filename: string, quality: number) {
   return archiveFilename
 }
 
-module.exports = (filename: string, quality: number) => {
+module.exports = ({
+  filename,
+  quality,
+}: {
+  filename: string
+  quality: number
+}) => {
   return transform(filename, quality)
 }

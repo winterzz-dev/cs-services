@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Form from '../components/form.astro'
+import NextSteps from '../components/next-steps.astro'
+import Support from '../components/support.astro'
+---
+
+<Layout>
+  <div id="container">
+    <main
+      class="w-screen h-screen flex flex-col justify-center items-center bg-gray-100 dark:bg-gray-800"
+    >
+      <section class="max-w-md p-5 mx-auto">
+        <Form />
+        <hr class="h-px my-8 w-full bg-gray-200 border-0 dark:bg-gray-700" />
+        <NextSteps />
+        <hr class="h-px my-8 w-full bg-gray-200 border-0 dark:bg-gray-700" />
+        <Support />
+      </section>
+    </main>
+  </div>
+</Layout>
+<script src="../scripts/form.ts"></script>

@@ -1,4 +1,5 @@
 import {
+  Body,
   Controller,
   Post,
   Res,
@@ -17,9 +18,15 @@ export class TransformerController {
   @UseInterceptors(FileInterceptor('file'))
   async upload(
     @UploadedFile() file: Express.Multer.File,
+    @Body() body: { quality: number },
     @Res() res: Response
   ) {
-    const filename = await this.transformerService.transform(file.filename)
+    const { quality = 100 } = body
+
+    const filename = await this.transformerService.transform(
+      file.filename,
+      quality
+    )
 
     return res.sendFile(filename)
   }

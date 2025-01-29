@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint:illustration-maker-server": "eslint ./apps/illustration-maker-server/src --fix"
+    "start:illustration-maker-server": "cd ./apps/illustration-maker-server && pnpm start:prod",
+    "build:illustration-maker-web": "cd ./apps/illustration-maker-web && pnpm build",
+    "lint:illustration-maker-server": "eslint ./apps/illustration-maker-server/src --fix",
+    "lint:illustration-maker-web": "eslint ./apps/illustration-maker-web/src --fix"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +15,8 @@
   "devDependencies": {
     "eslint": "^8.57.0",
     "eslint-kit": "^11.0.0",
-    "prettier": "^3.0.0"
+    "prettier": "^3.4.2",
+    "prettier-plugin-astro": "^0.14.1"
   },
   "dependencies": {
     "typescript": "^5.7.3"

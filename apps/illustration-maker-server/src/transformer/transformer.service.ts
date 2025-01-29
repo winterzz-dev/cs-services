@@ -8,7 +8,7 @@ export class TransformerService {
     filename: resolve(__dirname, 'transformer.worker.piscina.js'),
   })
 
-  async transform(filename: string): Promise<string> {
-    return await this.workerPiscina.run(filename)
+  async transform(filename: string, quality: number): Promise<string> {
+    return await this.workerPiscina.run({ filename, quality })
   }
 }

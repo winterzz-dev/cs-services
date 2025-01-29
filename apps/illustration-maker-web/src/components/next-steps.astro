@@ -1,0 +1,30 @@
+---
+import { STEAM_PASTE_CODE, STEAM_UPLOAD_URL } from '../constants'
+---
+
+<section class="flex flex-col gap-4">
+  <h2 class="text-lg font-semibold text-gray-900 dark:text-white">
+    Next steps
+  </h2>
+  <ol
+    class="max-w-md space-y-1 text-gray-500 list-decimal list-inside dark:text-gray-400"
+  >
+    <li>
+      Sign in to the web version of Steam and open <a
+        href={STEAM_UPLOAD_URL}
+        class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+        target="_blank">this link</a
+      >.
+    </li>
+    <li>
+      Open DevTools, then paste the code and run it.
+      <code
+        id="copy_to_clipboard_code"
+        class="p-1.5 m-4 border rounded-lg cursor-pointer bg-gray-200"
+        >{STEAM_PASTE_CODE}</code
+      >
+    </li>
+    <li>Fill in the form fields and upload the illustration.</li>
+    <li>Add an illustration block to the profile.</li>
+  </ol>
+</section>
