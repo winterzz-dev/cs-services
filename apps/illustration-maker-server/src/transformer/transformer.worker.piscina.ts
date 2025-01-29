@@ -14,9 +14,13 @@ const getOutputFileName = (filename: string) =>
 
 async function transform(filename: string, quality: number) {
   const buffer = await readFile(join(__dirname, TEMPORAL_DIR_NAME, filename))
-  const resized = sharp(buffer, { animated: true }).resize({
-    width: DEFAULT_GIF_WIDTH,
-  })
+  const resizedBuffer = await sharp(buffer, { animated: true })
+    .resize({
+      width: DEFAULT_GIF_WIDTH,
+    })
+    .toBuffer()
+
+  const resized = sharp(resizedBuffer, { animated: true })
 
   const { height = 100, width = 100, pages = 1 } = await resized.metadata()
   const fixedHeight = Math.round((height / pages) * (width / DEFAULT_GIF_WIDTH))
