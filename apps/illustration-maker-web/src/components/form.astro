@@ -1,9 +1,6 @@
 ---
 import { FORM_URL } from '../constants'
-
-const QUALITY_OPTIONS = [
-  100, 95, 90, 85, 80, 75, 70, 65, 60, 55, 50, 45, 40, 35, 30,
-]
+import { QUALITY_OPTIONS, MAX_FILE_SIZE_MB } from '~illustration-maker-server/transformer'
 ---
 
 <form
@@ -30,7 +27,7 @@ const QUALITY_OPTIONS = [
       class="mt-1 text-sm text-gray-500 dark:text-gray-300"
       id="file_input_help"
     >
-      GIF only (MAX. 10 MB).
+      GIF only (MAX. {MAX_FILE_SIZE_MB} MB).
     </p>
   </div>
 

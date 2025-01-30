@@ -7,4 +7,9 @@ module.exports = configure({
     presets.prettier(),
     presets.typescript(),
   ],
+  extend: {
+    rules: {
+      'import-x/ no-unresolved': 'off'
+    }
+  }
 })

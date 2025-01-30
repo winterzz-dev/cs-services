@@ -23,10 +23,7 @@ export class TransformerController {
   ) {
     const { quality = 100 } = body
 
-    const filename = await this.transformerService.transform(
-      file.filename,
-      quality
-    )
+    const filename = await this.transformerService.transform(file, quality)
 
     return res.sendFile(filename)
   }

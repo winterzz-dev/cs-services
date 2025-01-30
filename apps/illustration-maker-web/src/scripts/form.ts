@@ -1,3 +1,7 @@
+import {
+  convertBytesToMegabytes,
+  MAX_FILE_SIZE_MB,
+} from '~illustration-maker-server/transformer'
 import { STEAM_PASTE_CODE } from '../constants'
 
 const form = document.querySelector<HTMLFormElement>('#file_input_form')
@@ -11,6 +15,12 @@ if (form) {
     const isFileSelected = fileInput?.files?.length !== 0
 
     if (!fileInput || !isFileSelected) {
+      event.preventDefault()
+    }
+
+    const file = fileInput?.files?.[0]
+
+    if (convertBytesToMegabytes(file!.size) > MAX_FILE_SIZE_MB) {
       event.preventDefault()
     }
   })
