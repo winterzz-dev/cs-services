@@ -1,0 +1,10 @@
+pre-commit:
+  parallel: false
+  piped: true
+  commands:
+    eslint-illustration-maker-server:
+      stage_fixed: true
+      run: pnpm lint:illustration-maker-server
+    eslint-illustration-maker-web:
+      stage_fixed: true
+      run: pnpm lint:illustration-maker-web
