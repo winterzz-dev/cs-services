@@ -8,3 +8,6 @@ pre-commit:
     eslint-illustration-maker-web:
       stage_fixed: true
       run: pnpm lint:illustration-maker-web
+    format-illustration-maker-web:
+      stage_fixed: true
+      run: pnpm format:illustration-maker-web

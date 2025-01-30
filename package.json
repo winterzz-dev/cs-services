@@ -8,7 +8,8 @@
     "build:illustration-maker-web": "cd ./apps/illustration-maker-web && pnpm build",
     "build:illustration-maker-server": "cd ./apps/illustration-maker-server && pnpm build",
     "lint:illustration-maker-server": "eslint ./apps/illustration-maker-server/src --fix",
-    "lint:illustration-maker-web": "eslint ./apps/illustration-maker-web/src --fix"
+    "lint:illustration-maker-web": "eslint ./apps/illustration-maker-web/src --fix",
+    "format:illustration-maker-web": "prettier ./apps/illustration-maker-web/src/**/*.astro -w"
   },
   "keywords": [],
   "author": "",
