@@ -11,3 +11,9 @@ pre-commit:
     format-illustration-maker-web:
       stage_fixed: true
       run: pnpm format:illustration-maker-web
+    eslint-fast-stats-server:
+      stage_fixed: true
+      run: pnpm lint:fast-stats-server
+    format-fast-stats-web:
+      stage_fixed: true
+      run: pnpm format:fast-stats-web

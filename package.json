@@ -7,9 +7,15 @@
     "start:illustration-maker-server": "cd ./apps/illustration-maker-server && pnpm start:prod",
     "build:illustration-maker-web": "cd ./apps/illustration-maker-web && pnpm build",
     "build:illustration-maker-server": "cd ./apps/illustration-maker-server && pnpm build",
+    "start:fast-stats-server": "cd ./apps/fast-stats-server && pnpm start:prod",
+    "build:fast-stats-web": "cd ./apps/fast-stats-web && pnpm build",
+    "build:fast-stats-server": "cd ./apps/fast-stats-server && pnpm build",
     "lint:illustration-maker-server": "eslint ./apps/illustration-maker-server/src --fix",
     "lint:illustration-maker-web": "eslint ./apps/illustration-maker-web/src --fix",
-    "format:illustration-maker-web": "prettier ./apps/illustration-maker-web/src/**/*.astro -w"
+    "lint:fast-stats-web": "eslint ./apps/fast-stats-web/src --fix",
+    "lint:fast-stats-server": "eslint ./apps/fast-stats-server/src --fix",
+    "format:illustration-maker-web": "prettier ./apps/illustration-maker-web/src/**/*.astro -w",
+    "format:fast-stats-web": "prettier ./apps/fast-stats-web/src/**/*.astro -w"
   },
   "keywords": [],
   "author": "",
