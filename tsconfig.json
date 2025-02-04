@@ -2,7 +2,8 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "~illustration-maker-server/*": ["./apps/illustration-maker-server/src/*"]
+      "~illustration-maker-server/*": ["./apps/illustration-maker-server/src/*"],
+      "~illustration-maker-web/*": ["./apps/illustration-maker-web/src/*"]
     }
   }
 }
